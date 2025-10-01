@@ -14,7 +14,7 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-   const baseUrl = import.meta.env.VITE_SERVER_URL;
+  const baseUrl = import.meta.env.VITE_SERVER_URL;
 
   const handelShow = () => {
     setShow(!show);
@@ -34,7 +34,7 @@ const SignUp = () => {
         },
         { withCredentials: true }
       );
-        console.log(res)
+      console.log(res);
       setLoading(false);
 
       // setUserData(res.data)
@@ -53,8 +53,6 @@ const SignUp = () => {
   return (
     <>
       <div className="w-full h-screen bg-white flex flex-col items-center justify-start px-4">
-
-
         {/* Form container */}
         <form className="w-full max-w-md bg-white lg:shadow-xl rounded-lg p-8 space-y-6 ">
           <h2 className="text-3xl font-bold text-center text-[#006699]">
@@ -139,7 +137,6 @@ const SignUp = () => {
               </span>{" "}
             </p>
           </Link>
-       
         </form>
       </div>
     </>
