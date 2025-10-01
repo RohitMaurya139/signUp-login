@@ -14,6 +14,8 @@ const SignUp = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+   const baseUrl = import.meta.env.VITE_SERVER_URL;
+
   const handelShow = () => {
     setShow(!show);
   };
@@ -22,7 +24,7 @@ const SignUp = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/auth/signup",
+        `${baseUrl}/api/auth/signup`,
         {
           firstName: firstName,
           lastName: lastName,

@@ -13,6 +13,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+const baseUrl = import.meta.env.VITE_SERVER_URL;
+
   const handelShow = () => {
     setShow(!show);
   };
@@ -21,7 +23,7 @@ const Login = () => {
     setLoading(true);
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/auth/login",
+        `${baseUrl}/api/auth/login`,
         { email: email, password: password },
         { withCredentials: true }
       );

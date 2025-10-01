@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import connectDB from "./config/db.js"
 import authRouter from "./routes/authRoutes.js";
+import userRouter from "./routes/userRoutes.js";
 dotenv.config();
 const app = express();
 
@@ -29,6 +30,7 @@ app.use(cookieParser());
 
 // Api routes
 app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
 
 const PORT = 4000;
 const startServer = async () => {
