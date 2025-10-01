@@ -4,7 +4,8 @@ import view from "../assets/view.png";
 import hide from "../assets/hide.png";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-const SignUp = () => {
+
+export default function Signup() {
   const [show, setShow] = useState(false);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -141,6 +142,4 @@ const SignUp = () => {
       </div>
     </>
   );
-};
-
-export default SignUp;
+}

@@ -4,7 +4,7 @@ import view from "../assets/view.png";
 import hide from "../assets/hide.png";
 import axios from "axios";
 
-const Login = () => {
+export default function Login() {
   const [show, setShow] = useState(false);
 
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-const baseUrl = import.meta.env.VITE_SERVER_URL;
+  const baseUrl = import.meta.env.VITE_SERVER_URL;
 
   const handelShow = () => {
     setShow(!show);
@@ -28,8 +28,8 @@ const baseUrl = import.meta.env.VITE_SERVER_URL;
         { withCredentials: true }
       );
 
-        setLoading(false);
-        console.log(res.data)
+      setLoading(false);
+      console.log(res.data);
       // setUserData(res.data)
       navigate("/");
       setEmail("");
@@ -43,8 +43,6 @@ const baseUrl = import.meta.env.VITE_SERVER_URL;
   return (
     <>
       <div className="w-full h-screen bg-white flex flex-col items-center justify-start px-4">
-      
-
         {/* Form container */}
         <form className="w-full max-w-md bg-white lg:shadow-xl rounded-lg p-8 space-y-6 ">
           <h2 className="text-3xl font-bold text-center text-[#006699]">
@@ -103,11 +101,8 @@ const baseUrl = import.meta.env.VITE_SERVER_URL;
               </span>{" "}
             </p>
           </Link>
-      
         </form>
       </div>
     </>
   );
-};
-
-export default Login;
+}
