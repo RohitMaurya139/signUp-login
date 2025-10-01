@@ -1,0 +1,44 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Production build output
+build/
+dist/
+dist-ssr/
+
+# Local env files (do not commit secrets)
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# IDE and editor specific
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary and local files
+*.local
+
+# Optional: coverage reports (if you generate them)
+coverage/
+
+# Optional: testing / jest cache
+jest-cache/
